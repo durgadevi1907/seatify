@@ -334,7 +334,7 @@ export default function App() {
       setSelectedSeatData(null);
 
       const res = await fetch(
-        `http://127.0.0.1:8000/seat_recommendation?start_location=${encodeURIComponent(startLocation)}&end_location=${encodeURIComponent(endLocation)}&time=${time24}&date=${journeyDate}`
+        ` https://seatify-api.onrender.com/seat_recommendation?start_location=${encodeURIComponent(startLocation)}&end_location=${encodeURIComponent(endLocation)}&time=${time24}&date=${journeyDate}`
       );
 
       if (!res.ok) throw new Error("Backend error");
