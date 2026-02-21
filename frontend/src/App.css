@@ -535,7 +535,6 @@ h1 {
   gap: 28px;
   align-items: flex-start;
 }
-
 .bus-container {
   background: white;
   border: 1.5px solid var(--border);
@@ -545,10 +544,17 @@ h1 {
   justify-content: center;
   box-shadow: var(--shadow);
   flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .bus-svg {
   display: block;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
 .seat-group {
