@@ -29,12 +29,19 @@ body {
   min-height: 100vh;
   color: var(--slate);
 }
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+}
 
 .app-wrapper {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   padding: 32px 20px 60px;
+  width: 100%;
+  background: var(--bg);
 }
 
 .app-container {
