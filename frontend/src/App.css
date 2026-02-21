@@ -39,9 +39,9 @@ body {
 
 .app-container {
   width: 100%;
-  margin: 0 250px;
+  margin: 0 auto;
   padding: 0 24px;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 .app-header {
@@ -826,48 +826,5 @@ h1 {
 
   .legend-item {
     padding: 8px 12px;
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .controls {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .input-group {
-    width: 100%;
-  }
-
-  .find-button {
-    width: 100%;
-  }
-
-  .main-layout {
-    flex-direction: column;
-  }
-
-  .bus-container {
-    width: 100%;
-    overflow-x: auto; /* allows horizontal scroll for the bus */
-  }
-
-  .bus-svg {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .side-panel {
-    width: 100%;
-  }
-
-  .best-seats {
-    flex-wrap: wrap;
-  }
-
-  .legend {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 }
