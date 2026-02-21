@@ -796,16 +796,49 @@ h1 {
 }
 
 @media (max-width: 600px) {
-  h1 { font-size: 40px; }
+  .app-wrapper {
+    padding: 20px 16px 40px;
+    background: var(--bg);
+  }
+
+  .app-container {
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  h1 { font-size: 36px; }
+  .subtitle { font-size: 14px; }
+
+  .legend {
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .legend-item {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
 
   .controls {
     flex-direction: column;
     gap: 12px;
+    padding: 16px;
   }
 
   .input-group {
     width: 100%;
     min-width: unset;
+  }
+
+  .time-group {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .time-picker-container {
+    width: 100%;
   }
 
   .find-button {
@@ -818,13 +851,28 @@ h1 {
     padding: 10px;
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  .legend {
-    gap: 10px;
+  .side-panel {
+    width: 100%;
   }
 
-  .legend-item {
-    padding: 8px 12px;
+  .best-seats {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .best-seat-card {
+    min-width: 75px;
+    padding: 10px 12px;
+  }
+
+  .recommendations-panel {
+    padding: 16px;
+  }
+
+  .journey-summary {
+    padding: 16px;
   }
 }
