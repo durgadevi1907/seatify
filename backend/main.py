@@ -4,7 +4,6 @@ from astral import Observer
 from astral.sun import azimuth, elevation
 from datetime import datetime, timedelta, date
 from zoneinfo import ZoneInfo
-from functools import lru_cache
 import math
 import httpx
 import asyncio
@@ -17,7 +16,7 @@ app = FastAPI(title="Seatify API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://seatify-tau.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
