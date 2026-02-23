@@ -334,10 +334,18 @@ export default function App() {
       setSelectedSeatData(null);
 
       const res = await fetch(
-        ` https://seatify-api.onrender.com/seat_recommendation?start_location=${encodeURIComponent(startLocation)}&end_location=${encodeURIComponent(endLocation)}&time=${time24}&date=${journeyDate}`
+        `https://seatify-api.onrender.com/seat_recommendation?start_location=${encodeURIComponent(startLocation)}&end_location=${encodeURIComponent(endLocation)}&time=${time24}&date=${journeyDate}`
       );
 
-      if (!res.ok) throw new Error("Backend error");
+      if (!res.ok) {
+        if (res.status === 400) {
+          const data = await res.json();
+          setError(data.detail || "Location not found. Please check the spelling and try again.");
+        } else {
+          setError("Unable to connect to backend. Make sure the server is running.");
+        }
+        return;
+}
       const data = await res.json();
       if (data.error) { setError(data.error); return; }
 
